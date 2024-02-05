@@ -5,12 +5,12 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts()],
+  plugins: [vue(), dts({ outDir: './dist/types' })],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "WsViteLibrary",
-      fileName: "ws-vite-lib"
+      fileName: "ws-vite-lib",
     },
     rollupOptions: {
       external: ["vue", "pinia"],
