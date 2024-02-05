@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "workspaces": [
+      "lib",
+      "app"
+    ],
+    "scripts": {
+      "app": "yarn workspace app vite",
+      "lib": "yarn workspace lib vite",
+      "lib:build": "yarn workspace lib build"
+    }
+  }
